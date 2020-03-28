@@ -1,6 +1,37 @@
 body,html{
   height:100vh;
 }
-#topbar{
-  height:5vh;
+#in{
+  font-size: 11em;
+}
+#out{
+  font-size: 1.3em;
+}
+
+a{
+  text-decoration: none!important;
+  color: #ffffff!important;
+}
+
+#topbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;            
+  width: 100%;
+  height: 5vh;
+}
+
+#logo {
+  flex: 0 1 auto;
+  width: auto; 
+  position: absolute;           
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#end {
+  flex: 0 1 auto;
+  width: auto;
+  margin-left: auto;     
 }
