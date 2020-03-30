@@ -1,6 +1,7 @@
 import { analyze } from './api/api.js'
 window.addEventListener('keydown', (evt) => {
   const keyCode = evt.keyCode || evt.which
+  console.log(keyCode)
   if (keyCode !== 8 && !(keyCode >= 48 && keyCode <= 57)) return false
   document.getElementById('out').style.visibility = 'visible'
   let num = parseInt(document.getElementById('in').innerHTML) || 0
@@ -13,10 +14,14 @@ window.addEventListener('keydown', (evt) => {
     num = num * 10 + keyCode - 48
   }
   if (!num) {
-    document.getElementById('in').innerHTML = ''
+    document.getElementById('in').innerHTML = '숫자를 입력해주세요'
+    document.getElementById('in').style.fontSize = '5em'
+    document.getElementById('in').style.marginTop = '3em'
     document.getElementById('out').style.visibility = 'hidden'
     return
   }
+  document.getElementById('in').style.fontSize = '11em'
+  document.getElementById('in').style.marginTop = '0em'
   document.getElementById('in').innerHTML = num
   const res = analyze(num)
   let str = ''
@@ -57,5 +62,5 @@ window.addEventListener('keydown', (evt) => {
       document.getElementById('isPerfect').innerHTML = '부족수'
       break
   }
-  console.log(res)
+  document.getElementById('log').innerHTML = res.log.toFixed(3)
 })

@@ -2,7 +2,8 @@ body,html{
   height:100vh;
 }
 #in{
-  font-size: 11em;
+  font-size: 5em;
+  margin-top: 3em;
 }
 #out{
   font-size: 1.3em;

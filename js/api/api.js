@@ -9,6 +9,7 @@ export function analyze (num) {
   res.root = Math.pow(res.num, 1 / 2)
   res.square = Math.pow(res.num, 2)
   res.isPerfect = isPerfect(res)
+  res.log = Math.log(res.num) / Math.log(10)
   return res
 }
 
